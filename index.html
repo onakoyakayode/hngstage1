@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stage 1</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="main">
+      <section class="hero">
+        <div class="img">
+          <img
+            src="./img/mypic.jpeg"
+            alt="April26"
+            data-testid="slackDisplayImage"
+          />
+        </div>
+        <h2 data-testid="slackUserName">Onakoya Oluwakayode</h2>
+        <h6 data-testid="myTrack">Frontend</h6>
+        <div class="date">
+          <p id="currentDayOfTheWeek" data-testid="currentDayOfTheWeek"></p>
+          <p id="currentUTCTime" data-testid="currentUTCTime"></p>
+        </div>
+        <a href="" data-testid="githubURL">Github Repository</a>
+      </section>
+    </main>
+
+    <script>
+      let daysOfWeek = [
+        "Sunday",
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+      ];
+
+      const date = new Date();
+
+      const dayOfWeek = date.getDay();
+
+      let currentDay = daysOfWeek[dayOfWeek];
+
+      const currentDayOfTheWeek = document.getElementById(
+        "currentDayOfTheWeek"
+      );
+      currentUTCTime = document.getElementById("currentUTCTime");
+      const currentUTCTimeMilliseconds = Date.now();
+
+      currentDayOfTheWeek.textContent = currentDay;
+      console.log(currentDay);
+      currentUTCTime.textContent = `Current UTC Time: ${currentUTCTimeMilliseconds}`;
+    </script>
+  </body>
+</html>

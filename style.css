@@ -1,0 +1,93 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+body {
+  color: #fff;
+}
+
+.main {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  width: 99%;
+  height: 100dvh;
+}
+.hero {
+  max-width: 400px;
+  width: 100%;
+  margin: auto;
+  background-color: #000;
+  height: 500px;
+  border-radius: 25px;
+  box-shadow: 10px 10px 30px rgba(104, 103, 103, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.img {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  margin-bottom: 30px;
+  background-color: #fc6000;
+  width: 100%;
+  height: 250px;
+  border-radius: 25px 25px 25px 25px;
+}
+
+.img [data-testid="slackDisplayImage"] {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 100%;
+  margin: auto;
+}
+
+[data-testid="slackUserName"] {
+  font-size: 1.7rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  margin-bottom: 5px;
+}
+
+[data-testid="myTrack"] {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #fc6000;
+  font-family: sans-serif;
+  margin-bottom: 40px;
+  padding: 4px;
+  border-radius: 3px;
+}
+
+.date {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  padding-inline: 30px;
+}
+
+[data-testid="currentDayOfTheWeek"] {
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+[data-testid="currentUTCTime"] {
+  font-size: 0.85rem;
+}
+
+a[data-testid="githubURL"] {
+  text-decoration: none;
+  color: #000;
+  background-color: #fc6000;
+  padding: 10px;
+  border-radius: 5px;
+}
